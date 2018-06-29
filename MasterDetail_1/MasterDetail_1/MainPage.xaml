@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MasterDetail_1"
+             x:Class="MasterDetail_1.MainPage">
+
+    <MasterDetailPage.Master>
+        <!-- FontSize: Micro:10 Small:14 Default:14 Medium:18 Large:22 -->
+        <!-- Title is mandatory for theMasterDetailPage.Master content -->
+        <ContentPage Padding="10" BackgroundColor="Azure" Title="Master">
+            <ContentPage.Content>
+                <StackLayout Margin="5,10,5,5">
+                    <Label Text="Master Page Menu" />
+                    <ListView x:Name="masterListView" RowHeight="25" ItemSelected="masterListView_ItemSelected"/>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+
+    <!-- Detail Page content is generated dynamically in the code behind -->
+    <MasterDetailPage.Detail>
+        <ContentPage />
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>
